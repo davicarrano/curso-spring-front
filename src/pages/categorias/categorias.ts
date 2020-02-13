@@ -37,4 +37,11 @@ export class CategoriasPage {
     
   }
 
+  itemClicado(cat: CategoriaDTO){
+    this.navCtrl.push('ProdutoPage', 
+    {
+      catParam: cat.id
+    });
+  }
+
 }

@@ -14,8 +14,11 @@
 <p>Página de categorias</p>
 
 <ion-list>
-  <button ion-item *ngFor="let cat of categorias">
+  <button ion-item *ngFor="let cat of categorias" (click)="itemClicado(cat)">
     {{cat.nome}}
+    <div class="item-note" item-end>
+      {{cat.id}}
+    </div>
   </button>
 </ion-list>
 
