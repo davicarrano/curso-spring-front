@@ -16,9 +16,9 @@
 <ion-list>
   <button ion-item *ngFor="let cat of categorias" (click)="itemClicado(cat)">
     {{cat.nome}}
-    <div class="item-note" item-end>
-      {{cat.id}}
-    </div>
+    <ion-thumbnail item-start>
+       <img src="{{bucketUrl}}/cat{{cat.id}}.jpg">
+    </ion-thumbnail>
   </button>
 </ion-list>
 

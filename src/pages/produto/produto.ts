@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProdutoDTO } from '../../models/Produto.dto';
 import { ProdutoService } from '../../services/domain/produto.service';
@@ -15,7 +15,7 @@ import { ProdutoService } from '../../services/domain/produto.service';
   selector: 'page-produto',
   templateUrl: 'produto.html',
 })
-export class ProdutoPage {
+export class ProdutoPage  {
 
   produtos: ProdutoDTO[];
 
