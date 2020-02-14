@@ -19,11 +19,11 @@ export class AuthService{
         });
     }
 
-    successfulLogin(token: string){
+    successfulLogin(email:string, token: string){
         let tok = token.substring(7);
         let user : LocalUser = {
             token: tok,
-            email: ''
+            email: email
         }
         this.storageService.setLocalUser(user);
     }

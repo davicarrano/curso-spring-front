@@ -19,14 +19,13 @@ export class HomePage {
   constructor(
     public navCtrl: NavController, 
     public menu: MenuController,
-    public auth: AuthService,
-    public storage: StorageService) {
+    public auth: AuthService) {
 
   }
 
   login(){
     this.auth.autenticar(this.creds).subscribe(response=>{
-      this.auth.successfulLogin(response.headers.get('Authorization'));     
+      this.auth.successfulLogin(this.creds.email,response.headers.get('Authorization'));     
     }, erro=>{
       console.log(erro);
     });
