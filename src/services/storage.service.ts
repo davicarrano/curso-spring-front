@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { CredenciaisDTO } from "../models/Credenciais.dto";
 import { STORAGE_KEYS } from "../config/storage-keys.config";
 import { LocalUser } from "../models/local-user";
 

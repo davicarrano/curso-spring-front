@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProdutoDTO } from '../../models/Produto.dto';
 import { ProdutoService } from '../../services/domain/produto.service';
