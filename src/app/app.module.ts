@@ -12,6 +12,7 @@ import { ProdutoService } from '../services/domain/produto.service';
 import { ErrorInterceptorProvider } from '../interceptors/error-interceptor';
 import { AuthService } from '../services/auth.service';
 import { StorageService } from '../services/storage.service';
+import {ToasterModule, ToasterService} from 'angular5-toaster';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { StorageService } from '../services/storage.service';
     ProdutoService,
     ErrorInterceptorProvider,
     AuthService,
-    StorageService
+    StorageService,
+    ToasterService
   ]
 })
 export class AppModule {}
