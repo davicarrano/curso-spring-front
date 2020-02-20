@@ -17,7 +17,7 @@ export class ClienteService{
     }
 
     getImageFromBucket(id:string):Observable<any>{
-        let url = `${API_CONFIG.bucketUrl}/cat${id}.jpg`;
+        let url = `${API_CONFIG.bucketUrl}/profile${id}.jpg`;
         return this.http.get(url,{responseType: 'blob'});
     }
 }

@@ -32,18 +32,23 @@ export class ProfilePage {
         this.cliente = response;
         this.getImageExists();
       }, erro=>{
+        if(erro.status == 403){
+          this.navCtrl.setRoot('HomePage');
+        }
         console.error(erro);
       })
+
+    }else{
+      //console.error("Valor do LocalUser: ",localUser);
+      this.navCtrl.setRoot('HomePage');
 
     }
   }
 
   getImageExists(){
-    console.log("Cliente: "+this.cliente);
     this.clienteService.getImageFromBucket(this.cliente.id)
       .subscribe(response=>{
-          this.cliente.imageUrl = `${API_CONFIG.bucketUrl}/cat${this.cliente.id}.jpg`;
-          console.log("Cliente xxx:" + this.cliente);
+          this.cliente.imageUrl = `${API_CONFIG.bucketUrl}/profile${this.cliente.id}.jpg`;
       },erro=>{
         console.error(erro);
       })
