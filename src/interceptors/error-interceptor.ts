@@ -21,7 +21,7 @@ export class ErrorInterceptor implements HttpInterceptor{
                 if (!errorObj.status){
                     errorObj= JSON.parse(errorObj);
                 }
-                console.log(errorObj);
+                
 
                 switch(errorObj.status){
                     case 401:

@@ -58,4 +58,7 @@ export class HomePage {
     this.menu.swipeEnable(true);
   }
 
+  cadastrarCliente(){
+    this.navCtrl.push('SignupPage');
+  }
 }
