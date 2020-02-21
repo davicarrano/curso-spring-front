@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { StorageService } from "../storage.service";
 import { Observable } from "rxjs";
 import { ClienteDTO } from "../../models/cliente.dto";
@@ -18,7 +18,12 @@ export class ClienteService{
 
     getImageFromBucket(id:string):Observable<any>{
         let url = `${API_CONFIG.bucketUrl}/profile${id}.jpg`;
-        return this.http.get(url,{responseType: 'blob'});
+        let he : HttpHeaders = new HttpHeaders();
+        //return this.http.get(url,);
+        //https://www.html5rocks.com/en/tutorials/cors/
+        //return this.http.get(url,{headers: he.set('Access-Control-Allow-Origin','http://localhost:8100'), responseType: 'blob'});
+        return this.http.get(url,{headers: he.set('Access-Control-Allow-Origin','http://localhost:8100')});
+        
     }
 
     insert(obj : ClienteDTO) {

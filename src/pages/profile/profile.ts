@@ -21,6 +21,7 @@ export class ProfilePage {
               public navParams: NavParams, 
               public storage: StorageService,
               public clienteService: ClienteService) {
+              
 
   }
 
