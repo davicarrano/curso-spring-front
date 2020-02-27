@@ -9,7 +9,7 @@
 
 
 <ion-list>
-  <button ion-item *ngFor="let prod of produtos" >
+  <button ion-item *ngFor="let prod of produtos" (click)="abrirProduto(prod.id)" >
     {{prod.nome}}
     <div class="item-note" item-end>
       {{prod.preco}}

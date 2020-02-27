@@ -18,11 +18,21 @@ export class ClienteService{
 
     getImageFromBucket(id:string):Observable<any>{
         let url = `${API_CONFIG.bucketUrl}/profile${id}.jpg`;
-        let he : HttpHeaders = new HttpHeaders();
+        //let he : HttpHeaders = new HttpHeaders();
         //return this.http.get(url,);
         //https://www.html5rocks.com/en/tutorials/cors/
         //return this.http.get(url,{headers: he.set('Access-Control-Allow-Origin','http://localhost:8100'), responseType: 'blob'});
-        return this.http.get(url,{headers: he.set('Access-Control-Allow-Origin','http://localhost:8100')});
+        //return this.http.get(url,{headers: he.set('Access-Control-Allow-Origin','http://localhost:8100'),responseType:"blob"});
+        /*
+        this.http.get(url,{responseType:"blob"}).subscribe(response=>{
+            console.log(response);
+        },erro=>{
+            console.error(erro);
+        })
+        */
+       
+        return this.http.get(url,{responseType:"blob"});
+        
         
     }
 

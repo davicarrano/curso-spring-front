@@ -47,12 +47,16 @@ export class ProfilePage {
   }
 
   getImageExists(){
+    //this.cliente.imageUrl = `${API_CONFIG.bucketUrl}/profile${this.cliente.id}.jpg`;
+
     this.clienteService.getImageFromBucket(this.cliente.id)
       .subscribe(response=>{
-          this.cliente.imageUrl = `${API_CONFIG.bucketUrl}/profile${this.cliente.id}.jpg`;
+         this.cliente.imageUrl = `${API_CONFIG.bucketUrl}/profile${this.cliente.id}.jpg`;
       },erro=>{
-        console.error(erro);
+        //console.error(erro);
       })
+
+     
   }
 
 }

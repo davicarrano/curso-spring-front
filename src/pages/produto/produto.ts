@@ -33,6 +33,10 @@ export class ProdutoPage  {
     });
   }
 
+  abrirProduto(idProduto: string){
+    this.navCtrl.push("ProdutoDetalhePage",{prodParam:idProduto});
+  }
+
 
 
 }
